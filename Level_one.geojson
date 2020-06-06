@@ -76,8 +76,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "A",
-        "value1": "",
+        "name": "C",
+        "value1": "1",
         "value2": "",
         "centroid": "39_44"
       },
@@ -111,7 +111,12 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+      "name": "C",
+        "value1": "1",
+        "value2": "",
+        "centroid": "39_44"
+      },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
