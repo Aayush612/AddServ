@@ -1,6 +1,7 @@
 {
   "type": "FeatureCollection",
-  "features": [
+   "properties":{"parent":"A3"},
+   "features": [
     {
       "type": "Feature",
       "properties": {
