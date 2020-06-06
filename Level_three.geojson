@@ -4,7 +4,7 @@
     {
       "type": "Feature",
       "properties": {
-	  "name":"A11",
+	  "name":"A31",
 	  "value1":"2",
 	  "value2":"",
 	  "centroid":"75_23"
@@ -40,7 +40,7 @@
     {
       "type": "Feature",
       "properties": {
-	  "name":"A12",
+	  "name":"A32",
 	  "value1":"3",
 	  "value2":"",
 	  "centroid":"76_16"
@@ -76,7 +76,7 @@
     {
       "type": "Feature",
       "properties": {
-	  "name":"A13",
+	  "name":"A33",
 	  "value1":"4",
 	  "value2":"",
 	  "centroid":"80_16"
@@ -112,7 +112,7 @@
     {
       "type": "Feature",
       "properties": {
-	  "name":"A14",
+	  "name":"A34",
 	  "value1":"6",
 	  "value2":"",
 	  "centroid":"72_19"},
