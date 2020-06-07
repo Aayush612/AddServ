@@ -1,4 +1,4 @@
-  var map = L.map('map').setView([23.35, 85.08], 4);
+  var map = L.map('map').setView([23.35, 85.08], 2);
 
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
     {
@@ -11,7 +11,7 @@
 	
 	let level_one,  level_two, level_three, exec_over=0;
 	async function setData(){
-		await $.getJSON("https://raw.githubusercontent.com/Aayush612/AddServ/master/Level_one.geojson", data =>{
+		await $.getJSON("https://raw.githubusercontent.com/Aayush612/AddServ/master/countries.geojson", data =>{
 		level_one=L.geoJson(data, {
 		style:  function(feature){
 					var colp=feature.properties.value1*4;
@@ -19,7 +19,7 @@
 						weight: 1, 
 						color: "blue", 
 						opacity: 0.2,
-						fillColor: "hsl("+colp+",30%,50%)", 
+						fillColor: "white", 
 						fillOpacity:  0.7
 					})
 						
@@ -29,15 +29,15 @@
 	}
 	
 	)
-	await $.getJSON("https://raw.githubusercontent.com/Aayush612/AddServ/master/Level_two.geojson", data =>{
+	await $.getJSON("https://raw.githubusercontent.com/Aayush612/AddServ/master/india_states.geojson", data =>{
 		level_two=L.geoJson(data, {
 		style:  function(feature){
 					var colp=feature.properties.value1*4;
 					return({
-						weight: 1, 
-						color: "blue", 
+						weight: 2, 
+						color: "red", 
 						opacity: 0.2,
-						fillColor: "hsl("+colp*colp+",30%,50%)", 
+						fillColor: "white", 
 						fillOpacity:  0.7
 					})
 						
@@ -46,25 +46,20 @@
 		)
 	}
 	)
-	 await $.getJSON("https://raw.githubusercontent.com/Aayush612/AddServ/master/Level_three.geojson", data =>{
+	 await $.getJSON("https://raw.githubusercontent.com/geohacker/india/master/district/india_district.geojson", data =>{
 		level_three=L.geoJson(data, {
 		style:  function(feature){
 					var colp=feature.properties.value1*4;
 					return({
 						weight: 1, 
-						color: "blue", 
-						opacity: 0.2,
-						fillColor: "hsl("+colp+",30%,50%)", 
+						color: "grey", 
+						opacity: 0.5,
+						fillColor: "beige", 
 						fillOpacity:  0.7
 					})
 						
 					},
-		 onEachFeature: function(feature, layern) {
-			var centroid=feature.properties.centroid.split('_')
-			var circ=L.circle(centroid,{radius: 160},{fillColor:"red", fill:true }) //feature.properties.value1*10
-			layern= null;
-			// layern=null;
-			}
+		
 		}
 		)
 	}
@@ -77,8 +72,6 @@
 	function afterExec(){
 		console.log("-----")
 		level_one.addTo(map)
-		// level_two.addTo(map)
-		// level_three.addTo(map)
 				
 		
 
